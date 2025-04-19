@@ -1,8 +1,4 @@
-![order](https://github.com/user-attachments/assets/5063e67f-639b-4b29-8a75-072fce8dd7e4)
-![menu](https://github.com/user-attachments/assets/bc68a829-9277-44bb-91df-5efb7ff174fa)
-![konfigurasi](https://github.com/user-attachments/assets/9a16fd43-9ed2-4b7b-a94e-d599dd894a5a)
-
-
+![image](https://github.com/user-attachments/assets/2173db6d-10b8-40ba-a26b-c9d175f68f93)
 
 # ☕ POS-CoffeeShop — Sistem Point of Sale Lengkap untuk Usaha UMKM
 
