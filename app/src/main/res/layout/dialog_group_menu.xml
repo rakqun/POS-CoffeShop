@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:background="@drawable/bg_dialog"
+    app:cardElevation="2dp">
+    
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+        
+        <TextView
+            android:id="@+id/tvTitleDialog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tambah Category"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:layout_marginStart="5dp"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <ImageView
+            android:id="@+id/imgClose"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/baseline_close_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/tvEtCategoryText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Masukan Category"
+            android:textSize="14sp"
+            android:textColor="@android:color/darker_gray"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintTop_toBottomOf="@id/tvTitleDialog"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/tvFlagText"/>
+
+        <EditText
+            android:id="@+id/etNameCategoryDialog"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:singleLine="true"
+            android:imeOptions="actionDone"
+            android:background="@android:drawable/editbox_background"
+            app:layout_constraintTop_toBottomOf="@id/tvEtCategoryText"/>
+
+        <TextView
+            android:id="@+id/tvDeptText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Dept"
+            android:textSize="14sp"
+            android:textColor="@android:color/darker_gray"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@id/etNameCategoryDialog"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/tvFlagText"/>
+
+        <TextView
+            android:id="@+id/tvFlagText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Flag"
+            android:textSize="14sp"
+            android:textColor="@android:color/darker_gray"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@id/etNameCategoryDialog"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tvDeptText"/>
+
+        <Spinner
+            android:id="@+id/spinnerDept"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            app:layout_constraintTop_toBottomOf="@id/tvDeptText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/spinnerFlags"/>
+
+        <Spinner
+            android:id="@+id/spinnerFlags"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            app:layout_constraintTop_toBottomOf="@id/tvFlagText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/spinnerDept"/>
+
+        <TextView
+            android:id="@+id/tvHapusOrBatal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hapus"
+            android:textSize="14sp"
+            android:textColor="@color/fiery_red"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintTop_toBottomOf="@id/spinnerFlags"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/tvSimpan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Simpan"
+            android:textSize="14sp"
+            android:textColor="@color/fiery_red"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="30dp"
+            app:layout_constraintTop_toBottomOf="@id/spinnerFlags"
+            app:layout_constraintEnd_toStartOf="@id/tvHapusOrBatal"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

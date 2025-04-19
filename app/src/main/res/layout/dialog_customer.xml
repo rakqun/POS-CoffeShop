@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="2dp"
+        android:background="@drawable/bg_dialog">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/tvTitleDialogCustomer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tambah Customer"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:layout_marginStart="5dp"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <ImageView
+                android:id="@+id/imgCloseCustomer"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/baseline_close_24"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/tvTextCustomer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Code Reg"
+                android:textSize="14sp"
+                android:textColor="@android:color/darker_gray"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintTop_toBottomOf="@id/tvTitleDialogCustomer"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/tvDisconCustomer"/>
+
+            <EditText
+                android:id="@+id/etNoRegDialogCustomer"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:singleLine="true"
+                android:imeOptions="actionDone"
+                android:background="@android:drawable/editbox_background"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/etDiscontDialogCustomer"
+                app:layout_constraintTop_toBottomOf="@id/tvTextCustomer"/>
+
+            <TextView
+                android:id="@+id/tvDisconCustomer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Disc %"
+                android:textSize="14sp"
+                android:textColor="@android:color/darker_gray"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintTop_toBottomOf="@id/tvTitleDialogCustomer"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tvTextCustomer"/>
+
+            <EditText
+                android:id="@+id/etDiscontDialogCustomer"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:singleLine="true"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:background="@android:drawable/editbox_background"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/etNoRegDialogCustomer"
+                app:layout_constraintTop_toBottomOf="@id/tvTextCustomer"/>
+
+            <TextView
+                android:id="@+id/tvNameTextCustomer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Name Customer"
+                android:textSize="14sp"
+                android:textColor="@android:color/darker_gray"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@id/etNoRegDialogCustomer"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <EditText
+                android:id="@+id/etNameDialogCustomer"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:singleLine="true"
+                android:imeOptions="actionDone"
+                android:background="@android:drawable/editbox_background"
+                app:layout_constraintTop_toBottomOf="@id/tvNameTextCustomer"/>
+
+            <TextView
+                android:id="@+id/tvTextAlamatCustomer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Alamat"
+                android:textSize="14sp"
+                android:textColor="@android:color/darker_gray"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@id/etNameDialogCustomer"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <EditText
+                android:id="@+id/etAlamatDialogCustomer"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:singleLine="true"
+                android:imeOptions="actionDone"
+                android:background="@android:drawable/editbox_background"
+                app:layout_constraintTop_toBottomOf="@id/tvTextAlamatCustomer"/>
+
+            <TextView
+                android:id="@+id/tvTextPhoneCustomer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Phone"
+                android:textSize="14sp"
+                android:textColor="@android:color/darker_gray"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@id/etAlamatDialogCustomer"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/tvEmailCustomer"/>
+
+            <EditText
+                android:id="@+id/etPhoneDialogCustomer"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:singleLine="true"
+                android:imeOptions="actionDone"
+                android:inputType="phone"
+                android:background="@android:drawable/editbox_background"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/etEmailDialogCustomer"
+                app:layout_constraintTop_toBottomOf="@id/tvTextPhoneCustomer"/>
+
+            <TextView
+                android:id="@+id/tvEmailCustomer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Email"
+                android:textSize="14sp"
+                android:textColor="@android:color/darker_gray"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@id/etAlamatDialogCustomer"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tvTextPhoneCustomer"/>
+
+            <EditText
+                android:id="@+id/etEmailDialogCustomer"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:singleLine="true"
+                android:imeOptions="actionDone"
+                android:inputType="textEmailAddress"
+                android:background="@android:drawable/editbox_background"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/etPhoneDialogCustomer"
+                app:layout_constraintTop_toBottomOf="@id/tvEmailCustomer"/>
+
+            <CheckBox
+                android:id="@+id/checkNoPb1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="No PB 1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/checkNoServiceChg"
+                app:layout_constraintTop_toBottomOf="@id/etEmailDialogCustomer"/>
+
+            <CheckBox
+                android:id="@+id/checkNoServiceChg"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="No Service Chg"
+                app:layout_constraintStart_toEndOf="@id/checkNoPb1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/etEmailDialogCustomer"/>
+
+            <TextView
+                android:id="@+id/tvFlagTextMenu"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Flag"
+                android:textSize="14sp"
+                android:textColor="@android:color/darker_gray"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@id/checkNoPb1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <Spinner
+                android:id="@+id/spinnerFlagsCustomer"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                app:layout_constraintTop_toBottomOf="@id/tvFlagTextMenu"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <TextView
+                android:id="@+id/tvBatalCustomer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Batal"
+                android:textSize="14sp"
+                android:textColor="@color/fiery_red"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="10dp"
+                app:layout_constraintTop_toBottomOf="@id/spinnerFlagsCustomer"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <TextView
+                android:id="@+id/tvSimpanCustomer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Simpan"
+                android:textSize="14sp"
+                android:textColor="@color/fiery_red"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="30dp"
+                app:layout_constraintTop_toBottomOf="@id/spinnerFlagsCustomer"
+                app:layout_constraintEnd_toStartOf="@id/tvBatalCustomer"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</ScrollView>

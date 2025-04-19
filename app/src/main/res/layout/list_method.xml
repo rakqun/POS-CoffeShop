@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    android:orientation="horizontal"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/tvTextMethod"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="METHOD"
+        android:textSize="14sp"
+        android:textColor="@color/black"/>
+
+</LinearLayout>

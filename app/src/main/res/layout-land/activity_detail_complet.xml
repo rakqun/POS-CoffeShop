@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.home.HomeFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvTitleHome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="REPORT SALES"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/tvStartDateSalesHome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2024-11-01"
+            android:textSize="16sp"
+            android:textColor="@android:color/holo_red_dark"
+            android:layout_marginEnd="10dp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:layout_constraintEnd_toStartOf="@id/tvToDateHome"
+            app:layout_constraintTop_toBottomOf="@id/tvTitleHome"/>
+
+        <TextView
+            android:id="@+id/tvToDateHome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="To"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvTitleHome"/>
+
+        <TextView
+            android:id="@+id/tvEndDateSalesHome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2024-11-01"
+            android:textSize="16sp"
+            android:visibility="gone"
+            android:textColor="@android:color/holo_red_dark"
+            android:textStyle="bold"
+            android:layout_marginStart="10dp"
+            app:layout_constraintStart_toEndOf="@id/tvToDateHome"
+            app:layout_constraintTop_toBottomOf="@id/tvTitleHome"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btnExport"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:theme="@style/FabActionTheme"
+            app:fabCustomSize="44dp"
+            app:elevation="1dp"
+            app:backgroundTint="@color/white"
+            app:srcCompat="@drawable/ios_share_48px"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <LinearLayout
+            android:id="@+id/llTotalPenjualan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvToDateHome">
+
+            <TextView
+                android:id="@+id/tvTextPenjualan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Total Sales"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:visibility="gone"
+                android:layout_marginTop="15dp"/>
+
+            <TextView
+                android:id="@+id/tvTotalPenjualan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Rp 10.500.000"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textColor="@android:color/black"
+                app:layout_constraintTop_toBottomOf="@id/tvTextPenjualan"/>
+
+            <TextView
+                android:id="@+id/tvQtyPenjualan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="32"
+                android:textSize="16sp"
+                android:textAlignment="center"
+                android:textStyle="italic"
+                android:textColor="@android:color/black"
+                app:layout_constraintTop_toBottomOf="@id/tvTextPenjualan"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvTextPayment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="PAYMENT"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/llTotalPenjualan"/>
+
+        <com.github.mikephil.charting.charts.BarChart
+            android:id="@+id/barChartPayment"
+            android:layout_width="0dp"
+            android:layout_height="250dp"
+            android:layout_marginEnd="5dp"
+            android:layout_centerHorizontal="true"
+            app:layout_constraintTop_toBottomOf="@id/llTotalPenjualan"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/barChartMenu"/>
+
+        <!--        <com.github.mikephil.charting.charts.PieChart-->
+        <!--            android:id="@+id/pieChartPayment"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="250dp"-->
+        <!--            android:layout_centerHorizontal="true"-->
+        <!--            app:layout_constraintTop_toBottomOf="@id/llTotalPenjualan"/>-->
+
+        <com.github.mikephil.charting.charts.BarChart
+            android:id="@+id/barChartMenu"
+            android:layout_width="0dp"
+            android:layout_height="250dp"
+            android:layout_marginStart="5dp"
+            android:layout_centerHorizontal="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/llTotalPenjualan"
+            app:layout_constraintStart_toEndOf="@id/barChartPayment"/>
+
+        <com.github.mikephil.charting.charts.BarChart
+            android:id="@+id/barChartCategory"
+            android:layout_width="0dp"
+            android:layout_height="250dp"
+            android:layout_marginEnd="5dp"
+            android:layout_centerHorizontal="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/barChartDate"
+            app:layout_constraintTop_toBottomOf="@id/barChartPayment"/>
+
+        <com.github.mikephil.charting.charts.BarChart
+            android:id="@+id/barChartDate"
+            android:layout_width="0dp"
+            android:layout_height="250dp"
+            android:layout_marginStart="5dp"
+            android:layout_centerHorizontal="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/barChartCategory"
+            app:layout_constraintTop_toBottomOf="@id/barChartMenu"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

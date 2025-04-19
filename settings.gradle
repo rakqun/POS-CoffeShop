@@ -1,0 +1,26 @@
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+        jcenter()
+        mavenCentral()
+        maven {
+            url("https://jitpack.io")
+        }
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        jcenter()
+        mavenCentral()
+        maven {
+            url("https://jitpack.io")
+        }
+    }
+}
+rootProject.name = "DayEat"
+include ':app'

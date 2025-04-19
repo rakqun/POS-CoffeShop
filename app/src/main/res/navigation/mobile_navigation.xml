@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_order">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.dayeat.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_nav_home_to_detailPenjualanActivity"
+            app:destination="@id/detailPenjualanActivity"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_menu"
+        android:name="com.example.dayeat.ui.fragment.MenuFragment"
+        android:label="fragment_menu"
+        tools:layout="@layout/fragment_menu" >
+        <action
+            android:id="@+id/action_nav_menu_to_childMenuActivity"
+            app:destination="@id/childMenuActivity"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left" />
+    </fragment>
+
+    <activity
+        android:id="@+id/childMenuActivity"
+        android:name="com.example.dayeat.ui.activity.ChildMenuActivity"
+        android:label="activity_child_menu"
+        tools:layout="@layout/activity_child_menu" >
+        <argument
+            android:name="MenuGroupId"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </activity>
+
+    <fragment
+        android:id="@+id/nav_table"
+        android:name="com.example.dayeat.ui.fragment.TableFragment"
+        android:label="fragment_table"
+        tools:layout="@layout/fragment_table" />
+
+    <fragment
+        android:id="@+id/nav_order"
+        android:name="com.example.dayeat.ui.fragment.OrderFragment"
+        android:label="fragment_order"
+        tools:layout="@layout/fragment_order" >
+        <action
+            android:id="@+id/action_nav_order_to_searchActivity"
+            app:destination="@id/searchActivity"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_pay"
+        android:name="com.example.dayeat.ui.fragment.PayFragment"
+        android:label="fragment_pay"
+        tools:layout="@layout/fragment_pay" >
+        <action
+            android:id="@+id/action_nav_pay_to_addOrderActivity"
+            app:destination="@id/addOrderActivity"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left" />
+        <action
+            android:id="@+id/action_nav_pay_to_splitMergeActivity"
+            app:destination="@id/splitMergeActivity"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_setting"
+        android:name="com.example.dayeat.ui.fragment.SettingFragment"
+        android:label="fragment_setting"
+        tools:layout="@layout/fragment_setting" >
+        <action
+            android:id="@+id/action_nav_setting_to_loginActivity"
+            app:destination="@id/loginActivity"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/loginActivity"
+            app:popUpToInclusive="true"/>
+    </fragment>
+
+    <activity
+        android:id="@+id/addOrderActivity"
+        android:name="com.example.dayeat.ui.activity.AddOrderActivity"
+        android:label="activity_add_order"
+        tools:layout="@layout/activity_add_order" />
+
+    <fragment
+        android:id="@+id/nav_user"
+        android:name="com.example.dayeat.ui.fragment.UserFragment"
+        android:label="fragment_user"
+        tools:layout="@layout/fragment_user" />
+
+    <activity
+        android:id="@+id/loginActivity"
+        android:name="com.example.dayeat.ui.activity.LoginActivity"
+        android:label="activity_login"
+        tools:layout="@layout/activity_login" />
+    <activity
+        android:id="@+id/detailPenjualanActivity"
+        android:name="com.example.dayeat.ui.activity.DetailPenjualanActivity"
+        android:label="activity_detail_penjualan"
+        tools:layout="@layout/activity_detail_penjualan" />
+    <activity
+        android:id="@+id/searchActivity"
+        android:name="com.example.dayeat.ui.activity.SearchActivity"
+        android:label="activity_search"
+        tools:layout="@layout/activity_search" />
+    <activity
+        android:id="@+id/splitMergeActivity"
+        android:name="com.example.dayeat.ui.activity.SplitMergeActivity"
+        android:label="activity_split_merge"
+        tools:layout="@layout/activity_split_merge" />
+    <fragment
+        android:id="@+id/nav_customer"
+        android:name="com.example.dayeat.ui.fragment.CustomerFragment"
+        android:label="fragment_customer"
+        tools:layout="@layout/fragment_customer" />
+    <fragment
+        android:id="@+id/nav_complet"
+        android:name="com.example.dayeat.ui.fragment.CompleteFragment"
+        android:label="fragment_complete"
+        tools:layout="@layout/fragment_complete" >
+        <action
+            android:id="@+id/action_nav_complet_to_detailCompletActivity"
+            app:destination="@id/detailCompletActivity"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_eod"
+        android:name="com.example.dayeat.ui.fragment.EndOfDayFragment"
+        android:label="fragment_end_of_day"
+        tools:layout="@layout/fragment_end_of_day" >
+        <action
+            android:id="@+id/action_nav_eod_to_detailCompletActivity"
+            app:destination="@id/detailCompletActivity"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left" />
+    </fragment>
+    <activity
+        android:id="@+id/detailCompletActivity"
+        android:name="com.example.dayeat.ui.activity.DetailCompletActivity"
+        android:label="activity_detail_complet"
+        tools:layout="@layout/activity_detail_complet"/>
+
+</navigation>

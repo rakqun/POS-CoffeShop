@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:cardElevation="2dp"
+        android:background="@drawable/bg_dialog">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/tvTitleDialogMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tambah Menu"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:layout_marginStart="5dp"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <ImageView
+                android:id="@+id/imgCloseMenu"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/baseline_close_24"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/tvTextMenu"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Masukan Menu"
+                android:textSize="14sp"
+                android:textColor="@android:color/darker_gray"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintTop_toBottomOf="@id/tvTitleDialogMenu"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <EditText
+                android:id="@+id/etNameMenuDialog"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:singleLine="true"
+                android:imeOptions="actionDone"
+                android:background="@android:drawable/editbox_background"
+                app:layout_constraintTop_toBottomOf="@id/tvTextMenu"/>
+
+            <TextView
+                android:id="@+id/tvTextHargaMenu"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Masukan Harga"
+                android:textSize="14sp"
+                android:textColor="@android:color/darker_gray"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@id/etNameMenuDialog"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <EditText
+                android:id="@+id/etHargaMenuDialog"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:singleLine="true"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:background="@android:drawable/editbox_background"
+                app:layout_constraintTop_toBottomOf="@id/tvTextHargaMenu"/>
+
+            <CheckBox
+                android:id="@+id/checkIncludeTax"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Include Tax"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/etHargaMenuDialog"/>
+
+            <CheckBox
+                android:id="@+id/checkIncludeChg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Include Chg"
+                app:layout_constraintStart_toEndOf="@id/checkIncludeTax"
+                app:layout_constraintEnd_toStartOf="@id/checkTaxAndService"
+                app:layout_constraintTop_toBottomOf="@id/etHargaMenuDialog"/>
+
+            <CheckBox
+                android:id="@+id/checkTaxAndService"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tax_service"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/etHargaMenuDialog"/>
+
+            <LinearLayout
+                android:id="@+id/llCheckTaxAndService"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@id/checkIncludeTax">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clTextTaxAndService"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tvTextTax"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Tax"
+                        android:textSize="14sp"
+                        android:textColor="@android:color/darker_gray"
+                        android:textAlignment="center"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/tvTextChg"/>
+
+                    <TextView
+                        android:id="@+id/tvTextNilaiTax"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="10.000"
+                        android:textSize="14sp"
+                        android:textColor="@android:color/black"
+                        android:textAlignment="center"
+                        app:layout_constraintTop_toBottomOf="@id/tvTextTax"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/tvTextNilaiChg"/>
+
+                    <TextView
+                        android:id="@+id/tvTextChg"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="ServiceChg"
+                        android:textSize="14sp"
+                        android:textColor="@android:color/darker_gray"
+                        android:textAlignment="center"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/tvTextNetTaxAndChg"
+                        app:layout_constraintStart_toEndOf="@id/tvTextTax"/>
+
+                    <TextView
+                        android:id="@+id/tvTextNilaiChg"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="10.000"
+                        android:textSize="14sp"
+                        android:textColor="@android:color/black"
+                        android:textAlignment="center"
+                        app:layout_constraintTop_toBottomOf="@id/tvTextChg"
+                        app:layout_constraintEnd_toStartOf="@id/tvTextNilaiNetTaxAndChg"
+                        app:layout_constraintStart_toEndOf="@id/tvTextNilaiTax"/>
+
+                    <TextView
+                        android:id="@+id/tvTextNetTaxAndChg"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Net Total"
+                        android:textSize="14sp"
+                        android:textColor="@android:color/darker_gray"
+                        android:textAlignment="center"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/tvTextChg"/>
+
+                    <TextView
+                        android:id="@+id/tvTextNilaiNetTaxAndChg"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="10.000"
+                        android:textSize="14sp"
+                        android:textColor="@android:color/black"
+                        android:textAlignment="center"
+                        app:layout_constraintTop_toBottomOf="@id/tvTextNetTaxAndChg"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/tvTextNilaiChg"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvTextPrefsMenu"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Prefs"
+                android:textSize="14sp"
+                android:textColor="@android:color/darker_gray"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@id/llCheckTaxAndService"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <EditText
+                android:id="@+id/etPrefMenuDialog"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:singleLine="true"
+                android:imeOptions="actionDone"
+                android:background="@android:drawable/editbox_background"
+                app:layout_constraintTop_toBottomOf="@id/tvTextPrefsMenu"/>
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chipGroupPref"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@id/etPrefMenuDialog"/>
+
+            <TextView
+                android:id="@+id/tvFlagTextMenu"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Flag"
+                android:textSize="14sp"
+                android:textColor="@android:color/darker_gray"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@id/chipGroupPref"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <Spinner
+                android:id="@+id/spinnerFlagsMenu"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                app:layout_constraintTop_toBottomOf="@id/tvFlagTextMenu"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <TextView
+                android:id="@+id/tvBatalMenu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hapus"
+                android:textSize="14sp"
+                android:textColor="@color/fiery_red"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="10dp"
+                app:layout_constraintTop_toBottomOf="@id/spinnerFlagsMenu"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <TextView
+                android:id="@+id/tvSimpanMenu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Simpan"
+                android:textSize="14sp"
+                android:textColor="@color/fiery_red"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="30dp"
+                app:layout_constraintTop_toBottomOf="@id/spinnerFlagsMenu"
+                app:layout_constraintEnd_toStartOf="@id/tvBatalMenu"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</ScrollView>

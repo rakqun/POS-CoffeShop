@@ -1,0 +1,47 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.DayEat" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/fiery_red</item>
+        <item name="colorPrimaryVariant">@color/fiery_red</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/butter_yellow</item>
+        <item name="colorSecondaryVariant">@color/butter_yellow</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">?colorPrimary</item>
+        <!-- Customize your theme here. -->
+        <item name="android:fontFamily">@font/open_sans_medium</item>
+        <item name="fontFamily">@font/open_sans_medium</item>
+    </style>
+
+    <style name="tab_text">
+        <item name="android:textSize">14sp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="Theme.DayEat.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="FabActionTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="backgroundTint">@color/white</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="DialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/slide_in_bottom</item>
+        <item name="android:windowExitAnimation">@anim/slide_out_bottom</item>
+    </style>
+
+    <style name="SearchView" parent="">
+        <item name="android:editTextColor">@android:color/black</item>
+        <item name="android:textColorHint">@android:color/darker_gray</item>
+    </style>
+
+    <style name="Theme.DayEat.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.DayEat.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+</resources>

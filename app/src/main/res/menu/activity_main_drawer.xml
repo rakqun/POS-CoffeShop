@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:showIn="navigation_view">
+
+    <item android:title="Kasir">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_order"
+                    android:icon="@drawable/shopping_cart_24px"
+                    android:title="Order"/>
+
+                <item
+                    android:id="@+id/nav_pay"
+                    android:icon="@drawable/account_balance_wallet_40px"
+                    android:title="Pay"/>
+
+                <item
+                    android:id="@+id/nav_complet"
+                    android:icon="@drawable/assignment_turned_in_40px"
+                    android:title="Complete Order"/>
+
+                <item
+                    android:id="@+id/nav_customer"
+                    android:icon="@drawable/baseline_people_outline_24"
+                    android:title="Customer"/>
+
+                <item
+                    android:id="@+id/nav_eod"
+                    android:icon="@drawable/baseline_date_range_24"
+                    android:title="End Of Day"/>
+
+            </group>
+        </menu>
+    </item>
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/home"
+            android:title="@string/menu_home" />
+
+        <item
+            android:id="@+id/nav_menu"
+            android:icon="@drawable/menu_food"
+            android:title="Menu"/>
+
+        <item
+            android:id="@+id/nav_table"
+            android:icon="@drawable/table_bar_24px"
+            android:title="Meja"/>
+
+        <item
+            android:id="@+id/nav_user"
+            android:icon="@drawable/profile"
+            android:title="User"/>
+
+    </group>
+
+    <item android:title="Tools">
+        <menu>
+            <group android:checkableBehavior="single">
+
+                <item
+                    android:id="@+id/nav_promo"
+                    android:icon="@drawable/baseline_discount_24"
+                    android:visible="false"
+                    android:title="Promo Code"/>
+
+                <item
+                    android:id="@+id/nav_setting"
+                    android:icon="@drawable/baseline_settings_24"
+                    android:title="Konfigurasi"/>
+
+                <item
+                    android:id="@+id/nav_logout"
+                    android:icon="@drawable/logout_24"
+                    android:title="Logout"/>
+            </group>
+        </menu>
+    </item>
+
+</menu>
